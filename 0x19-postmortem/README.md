@@ -1,8 +1,14 @@
 POSTMORTEM REPORT ON AN OUTAGE THAT OCCURRED ON THE 10TH OF AUGUST, 2023
+
+
+
 Issue Summary:
+
 Duration: August 10, 2023, 14:45 GMT - August 11, 2023, 03:30 GMT Impact: Service degradation affecting our online marketplace platform. User Experience: Users experienced slow page loading, delayed transactions, and intermittent errors. Approximately 20% of users were affected.
+
 Root Cause:
 The root cause of the outage was identified as a database deadlock situation triggered by a code update. This led to excessive resource contention and slowed down critical database queries.
+
 Timeline:
 August 10, 2023, 14:45 GMT: Issue detected via monitoring alert showing increased response times.
 August 10, 2023, 14:50 GMT: Engineering team engaged to investigate the performance degradation, suspecting database issues.
@@ -22,12 +28,13 @@ Implement stricter database transaction management guidelines to avoid deadlocks
 Enhance monitoring and alerting mechanisms to quickly identify and respond to similar performance degradation issues.
 Conduct thorough post-incident reviews to identify areas for improvement and knowledge sharing among teams.
 
-
 Tasks to Address the Issue:
 Conduct a comprehensive code review of recent changes to identify potential unintended consequences.
 Review and enhance database transaction handling to prevent deadlock scenarios.
 Implement additional automated tests to catch performance regressions during the development phase.
 Enhance monitoring by adding specific alerts for critical database performance metrics.
 Establish a clear communication protocol for escalating incidents to senior specialists.
+
+
 In conclusion, the recent service degradation on our online marketplace platform was caused by a database deadlock triggered by an unintended code change. The issue was promptly identified, resolved, and measures are being taken to prevent similar incidents in the future through enhanced testing, monitoring, and communication procedures.
 
